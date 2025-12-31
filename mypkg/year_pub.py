@@ -5,6 +5,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
 
+
 class YearPub(Node):
     def __init__(self):
         super().__init__("year_pub")
@@ -22,10 +23,12 @@ class YearPub(Node):
         if self.count >= 3:
             rclpy.shutdown()
 
+
 def main():
     rclpy.init()
     node = YearPub()
     rclpy.spin(node)
+
 
 if __name__ == "__main__":
     main()

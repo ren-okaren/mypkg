@@ -1,0 +1,2 @@
+Invoking command in '/home/ren/ros2_ws/src/mypkg': PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+Invoked command in '/home/ren/ros2_ws/src/mypkg' returned '1': PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

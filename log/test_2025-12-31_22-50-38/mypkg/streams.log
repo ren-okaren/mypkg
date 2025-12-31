@@ -1,0 +1,141 @@
+[0.407s] Invoking command in '/home/ren/ros2_ws/src/mypkg': PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[1.112s] [1m============================= test session starts ==============================[0m
+[1.112s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[1.119s] cachedir: build/mypkg/.pytest_cache
+[1.120s] rootdir: /home/ren/ros2_ws/src/mypkg
+[1.120s] plugins: launch-testing-ros-0.19.13, ament-flake8-0.12.14, launch-testing-1.0.13, ament-lint-0.12.14, ament-copyright-0.12.14, ament-xmllint-0.12.14, ament-pep257-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[1.284s] [1mcollecting ... [0m[1m
+[1.284s] collected 3 items                                                              [0m
+[1.284s] 
+[1.295s] test/test_copyright.py [33ms[0m[32m                                                 [ 33%][0m
+[1.596s] test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+[1.647s] test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+[1.647s] 
+[1.647s] =================================== FAILURES ===================================
+[1.647s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[1.648s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[1.734s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[1.735s] [1m[31mE   AssertionError: Found 16 code style errors / warnings:[0m
+[1.735s] [1m[31mE     ./setup.py:25:9: E122 continuation line missing indentation or outdented[0m
+[1.735s] [1m[31mE     ./setup.py:26:9: E122 continuation line missing indentation or outdented[0m
+[1.735s] [1m[31mE     ./setup.py:27:9: E122 continuation line missing indentation or outdented[0m
+[1.735s] [1m[31mE     ./setup.py:28:9: E122 continuation line missing indentation or outdented[0m
+[1.736s] [1m[31mE     ./setup.py:29:9: E122 continuation line missing indentation or outdented[0m
+[1.736s] [1m[31mE     ./setup.py:30:9: E122 continuation line missing indentation or outdented[0m
+[1.736s] [1m[31mE     ./launch/wareki.launch.py:9:1: E302 expected 2 blank lines, found 1[0m
+[1.736s] [1m[31mE     ./mypkg/wareki_converter.py:8:1: E302 expected 2 blank lines, found 1[0m
+[1.737s] [1m[31mE     ./mypkg/wareki_converter.py:22:1: E302 expected 2 blank lines, found 1[0m
+[1.737s] [1m[31mE     ./mypkg/wareki_converter.py:32:1: E302 expected 2 blank lines, found 1[0m
+[1.737s] [1m[31mE     ./mypkg/wareki_converter.py:39:1: E305 expected 2 blank lines after class or function definition, found 1[0m
+[1.737s] [1m[31mE     ./mypkg/setup.py:1:1: W391 blank line at end of file[0m
+[1.737s] [1m[31mE     ./mypkg/__init__.py:1:1: W391 blank line at end of file[0m
+[1.738s] [1m[31mE     ./mypkg/year_pub.py:8:1: E302 expected 2 blank lines, found 1[0m
+[1.738s] [1m[31mE     ./mypkg/year_pub.py:25:1: E302 expected 2 blank lines, found 1[0m
+[1.738s] [1m[31mE     ./mypkg/year_pub.py:30:1: E305 expected 2 blank lines after class or function definition, found 1[0m
+[1.739s] [1m[31mE   assert 1 == 0[0m
+[1.739s] ----------------------------- Captured stdout call -----------------------------
+[1.739s] 
+[1.739s] ./setup.py:25:9: E122 continuation line missing indentation or outdented
+[1.739s]         'talker = mypkg.talker:main',
+[1.740s]         ^
+[1.740s] 
+[1.740s] ./setup.py:26:9: E122 continuation line missing indentation or outdented
+[1.740s]         'listener = mypkg.listener:main',
+[1.740s]         ^
+[1.741s] 
+[1.741s] ./setup.py:27:9: E122 continuation line missing indentation or outdented
+[1.741s]         'talker_topic = mypkg.talker_topic:main',
+[1.741s]         ^
+[1.741s] 
+[1.741s] ./setup.py:28:9: E122 continuation line missing indentation or outdented
+[1.742s]         'listener_topic = mypkg.listener_topic:main',
+[1.742s]         ^
+[1.742s] 
+[1.742s] ./setup.py:29:9: E122 continuation line missing indentation or outdented
+[1.743s]         'wareki_converter = mypkg.wareki_converter:main',
+[1.743s]         ^
+[1.743s] 
+[1.743s] ./setup.py:30:9: E122 continuation line missing indentation or outdented
+[1.743s]         'year_pub = mypkg.year_pub:main',
+[1.744s]         ^
+[1.744s] 
+[1.744s] ./launch/wareki.launch.py:9:1: E302 expected 2 blank lines, found 1
+[1.744s] def generate_launch_description():
+[1.745s] ^
+[1.745s] 
+[1.745s] ./mypkg/wareki_converter.py:8:1: E302 expected 2 blank lines, found 1
+[1.746s] def to_wareki(year: int) -> str:
+[1.746s] ^
+[1.746s] 
+[1.746s] ./mypkg/wareki_converter.py:22:1: E302 expected 2 blank lines, found 1
+[1.747s] class WarekiConverter(Node):
+[1.747s] ^
+[1.747s] 
+[1.747s] ./mypkg/wareki_converter.py:32:1: E302 expected 2 blank lines, found 1
+[1.747s] def main():
+[1.748s] ^
+[1.748s] 
+[1.748s] ./mypkg/wareki_converter.py:39:1: E305 expected 2 blank lines after class or function definition, found 1
+[1.748s] if __name__ == "__main__":
+[1.748s] ^
+[1.749s] 
+[1.749s] ./mypkg/setup.py:1:1: W391 blank line at end of file
+[1.749s] 
+[1.749s] ^
+[1.749s] 
+[1.750s] ./mypkg/__init__.py:1:1: W391 blank line at end of file
+[1.750s] 
+[1.750s] ^
+[1.750s] 
+[1.750s] ./mypkg/year_pub.py:8:1: E302 expected 2 blank lines, found 1
+[1.751s] class YearPub(Node):
+[1.751s] ^
+[1.751s] 
+[1.751s] ./mypkg/year_pub.py:25:1: E302 expected 2 blank lines, found 1
+[1.752s] def main():
+[1.752s] ^
+[1.752s] 
+[1.752s] ./mypkg/year_pub.py:30:1: E305 expected 2 blank lines after class or function definition, found 1
+[1.752s] if __name__ == "__main__":
+[1.753s] ^
+[1.753s] 
+[1.753s] 6     E122 continuation line missing indentation or outdented
+[1.753s] 6     E302 expected 2 blank lines, found 1
+[1.754s] 2     E305 expected 2 blank lines after class or function definition, found 1
+[1.754s] 2     W391 blank line at end of file
+[1.754s] 
+[1.754s] 14 files checked
+[1.754s] 16 errors
+[1.755s] 
+[1.755s] 'E'-type errors: 14
+[1.755s] 'W'-type errors: 2
+[1.755s] 
+[1.755s] Checked files:
+[1.756s] 
+[1.756s] * ./setup.py
+[1.756s] * ./launch/wareki.launch.py
+[1.756s] * ./launch/talk_listen.launch.py
+[1.756s] * ./mypkg/wareki_converter.py
+[1.757s] * ./mypkg/listener.py
+[1.757s] * ./mypkg/listener_topic.py
+[1.757s] * ./mypkg/setup.py
+[1.757s] * ./mypkg/__init__.py
+[1.757s] * ./mypkg/talker_topic.py
+[1.758s] * ./mypkg/year_pub.py
+[1.758s] * ./mypkg/talker.py
+[1.758s] * ./test/test_flake8.py
+[1.758s] * ./test/test_pep257.py
+[1.758s] * ./test/test_copyright.py
+[1.759s] ----------------------------- Captured stderr call -----------------------------
+[1.759s] option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[1.759s] ---- generated xml file: /home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml ----
+[1.759s] =========================== short test summary info ============================
+[1.759s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 16 code style...
+[1.760s] [33m=============================== warnings summary ===============================[0m
+[1.760s] test/test_flake8.py::test_flake8
+[1.760s] test/test_flake8.py::test_flake8
+[1.760s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[1.760s] 
+[1.761s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[1.761s] [31m============== [31m[1m1 failed[0m, [32m1 passed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.62s[0m[31m ==============[0m
+[1.872s] Invoked command in '/home/ren/ros2_ws/src/mypkg' returned '1': PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

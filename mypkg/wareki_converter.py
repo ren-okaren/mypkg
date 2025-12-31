@@ -5,6 +5,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
 
+
 def to_wareki(year: int) -> str:
     # NOTE: 「年内の改元日」は考慮せず、西暦年だけで判定する（仕様としてREADMEに明記）
     if year >= 2019:
@@ -19,6 +20,7 @@ def to_wareki(year: int) -> str:
         return f"明治{year - 1867}年"
     return "対応外"
 
+
 class WarekiConverter(Node):
     def __init__(self):
         super().__init__("wareki_converter")
@@ -29,12 +31,14 @@ class WarekiConverter(Node):
         w = to_wareki(y)
         self.get_logger().info(f"year={y} -> {w}")
 
+
 def main():
     rclpy.init()
     node = WarekiConverter()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
+
 
 if __name__ == "__main__":
     main()
