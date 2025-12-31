@@ -2,24 +2,47 @@ name: test
 
 on:
   push:
-  pull_request:
 
 jobs:
-  run-test:
-    runs-on: ubuntu-latest
+  build-and-test:
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run shell tests (if exists)
+      - name: Setup ROS 2 (Humble)
+        uses: ros-tooling/setup-ros@v0.7
+        with:
+          required-ros-distributions: humble
+
+      - name: Install build tools
         run: |
-          set -eu
-          if [ -f ./test/test.bash ]; then
-            chmod +x ./test/test.bash
-            ./test/test.bash
-          elif [ -f ./test.bash ]; then
-            chmod +x ./test.bash
-            ./test.bash
-          else
-            echo "No test script found (test/test.bash or test.bash)."
-            echo "Add one if the assignment requires it."
-          fi
+          sudo apt-get update
+          sudo apt-get install -y python3-colcon-common-extensions python3-rosdep rsync
+          sudo rosdep init || true
+          rosdep update
+
+      - name: Prepare workspace
+        shell: bash
+        run: |
+          mkdir -p ~/ros2_ws/src
+          rsync -a ./ ~/ros2_ws/src/mypkg/
+
+          # もし ren_msgs が別リポジトリならここで取ってくる（URLは自分のに直す）
+          # git clone https://github.com/ren-okaren/ren_msgs.git ~/ros2_ws/src/ren_msgs
+
+      - name: Build
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ~/ros2_ws
+          rosdep install --from-paths src -i -y --rosdistro humble
+          colcon build
+
+      - name: Test
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ~/ros2_ws
+          colcon test
+          colcon test-result --verbose
+
