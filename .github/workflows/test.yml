@@ -1,0 +1,25 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run shell tests (if exists)
+        run: |
+          set -eu
+          if [ -f ./test/test.bash ]; then
+            chmod +x ./test/test.bash
+            ./test/test.bash
+          elif [ -f ./test.bash ]; then
+            chmod +x ./test.bash
+            ./test.bash
+          else
+            echo "No test script found (test/test.bash or test.bash)."
+            echo "Add one if the assignment requires it."
+          fi
