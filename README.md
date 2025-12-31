@@ -21,7 +21,7 @@ ROS 2 のサービス通信を使って、指定した西暦（例: 2004）を�
 ```bash
 cd ~/ros2_ws
 colcon build --packages-select ren_msgs mypkg
-source install/local_setup.bash
+source install/local_setup.bash```
 
 ### 2) 実行
 `ros2 launch mypkg wareki.launch.py year:=2004`
