@@ -5,6 +5,7 @@
   <version>0.0.0</version>
   <description>a package for practice</description>
   <maintainer email="renrenda77@gmail.com">Ren Okazaki</maintainer>
+  <exec_depend>launch_ros</exec_depend>
   <license>BSD-3-Clause</license>
 　<exec_depend>rclpy</exec_depend>
 　<exec_depend>std_msgs</exec_depend>
