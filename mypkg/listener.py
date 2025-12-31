@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Ren
+# SPDX-License-Identifier: MIT
 import rclpy
 from rclpy.node import Node
 from ren_msgs.srv import Query
@@ -23,7 +25,7 @@ def main():
             except Exception:
                 node.get_logger().info("呼び出し失敗")
             else:
-                node.get_logger().info("age: {}".format(response.age))
+                node.get_logger().info("Listen: age: {}".format(response.age))
             break
 
     node.destroy_node()
