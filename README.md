@@ -1,45 +1,39 @@
-# mypkg: 西暦→和暦変換（ROS 2）
-
-ROS 2 のサービス通信を使って、指定した西暦（例: 2004）を和暦（例: 平成16年）に変換してログに出力するパッケージです。
+# mypkg: 西暦 → 和暦変換（ROS 2）
 
 ## 概要
-- launch で2つのノードを起動します
-- `year` パラメータで与えた西暦を和暦に変換し、結果をログに出力します
+本パッケージは、ROS 2 のサービス通信を用いて 
+**西暦（例: 2004）を和暦（例: 平成16年）に変換するサービスを提供するパッケージ**です。
 
-## ノード
+他ノードからのサービス要求に応じて変換処理を行い、
+結果をレスポンスとして返します。
+
+---
+
+## 構成
+本パッケージは、以下の 2 つのノードから構成されます。
+
+- `wareki_server`
+  - サービス `/ad_to_wareki` を提供するノード
+  - 西暦を受け取り、対応する和暦文字列をレスポンスとして返します
+
 - `year_pub`
-  - パラメータ `year`（西暦）をサービス `/query` に送ります
-- `listener`
-  - サービス `/query` を受け取り、和暦に変換してログに出力します
+  - 起動時にパラメータとして与えられた西暦を、
+    サービス `/ad_to_wareki` にリクエストとして送信するノード
+
+---
 
 ## インタフェース
-- Service: `/query`（`ren_msgs/srv/Query`）
 
-## 使い方
+### Service: `/ad_to_wareki`
 
-### 1) ビルド
-`cd ~/ros2_ws`
+使用するサービス型は以下の通りです。
 
-`colcon build --packages-select ren_msgs mypkg`
+`mypkg_interfaces/srv/AdTowareki`
 
-`source install/local_setup.bash`
+```text
+int32 ad_year
+---
+string wareki
 
-### 2) 実行
-`ros2 launch mypkg wareki.launch.py year:=2004`
-
-### 3) 出力確認
-ログに次のように表示されます：
-- year=2004 -> 平成16年
-
-
-## 実行
-year に西暦を指定して起動します。
-ros2 launch mypkg wareki.launch.py year:=2004
-
-## 出力例
-ログに次のような形式で表示されます（例）:
-- year=2004 -> 平成16年
-
-## ライセンス
-MIT License. 詳細は `LICENSE` を参照してください。
-各ソースファイル先頭にも SPDX 形式でライセンス情報を記載しています。
+`ad_year`:西暦
+`wareki`:変換後の和暦文字
