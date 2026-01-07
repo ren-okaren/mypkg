@@ -10,10 +10,15 @@ from launch_ros.actions import Node
 def generate_launch_description():
     year = LaunchConfiguration("year")
 
-    return LaunchDescription([
-        DeclareLaunchArgument("year", default_value="2004"),
-        Node(package="mypkg", executable="wareki_converter", output="screen"),
-        Node(package="mypkg", executable="year_pub",
-             parameters=[{"year": year}],
-             output="screen"),
-    ])
+    return LaunchDescription(
+        [
+            DeclareLaunchArgument("year", default_value="2004"),
+            Node(package="mypkg", executable="wareki_converter", output="screen"),
+            Node(
+                package="mypkg",
+                executable="year_pub",
+                parameters=[{"year": year}],
+                output="screen",
+            ),
+        ]
+    )
