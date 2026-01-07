@@ -22,6 +22,7 @@ def to_wareki(year: int) -> str:
 
 
 class WarekiConverter(Node):
+
     def __init__(self):
         super().__init__("wareki_converter")
         self.sub = self.create_subscription(Int32, "year", self.cb, 10)

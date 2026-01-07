@@ -7,6 +7,7 @@ from std_msgs.msg import Int32
 
 
 class YearPub(Node):
+
     def __init__(self):
         super().__init__("year_pub")
         self.declare_parameter("year", 2004)
