@@ -31,7 +31,7 @@ setup(
             "listener_topic = mypkg.listener_topic:main",
             "wareki_converter = mypkg.wareki_converter:main",
             "year_pub = mypkg.year_pub:main",
-            'wareki_server = mypkg.wareki_server:main',
+            "wareki_server = mypkg.wareki_server:main",
         ],
     },
 )

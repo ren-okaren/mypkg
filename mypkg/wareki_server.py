@@ -18,9 +18,9 @@ def ad_to_wareki(ad: int) -> str:
 
 class WarekiServer(Node):
     def __init__(self):
-        super().__init__('wareki_server')
-        self.srv = self.create_service(AdTowareki, 'ad_to_wareki', self.cb)
-        self.get_logger().info('service /ad_to_wareki ready')
+        super().__init__("wareki_server")
+        self.srv = self.create_service(AdTowareki, "ad_to_wareki", self.cb)
+        self.get_logger().info("service /ad_to_wareki ready")
 
     def cb(self, req, res):
         res.wareki = ad_to_wareki(req.ad_year)
@@ -36,5 +36,5 @@ def main():
         node.destroy_node()
         rclpy.shutdown()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
