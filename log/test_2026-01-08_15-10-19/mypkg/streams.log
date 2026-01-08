@@ -1,0 +1,22 @@
+[0.446s] Invoking command in '/home/ren/ros2_ws/src/mypkg': CONDA_PROMPT_MODIFIER=(base) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[0.827s] [1m============================= test session starts ==============================[0m
+[0.827s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[0.834s] cachedir: build/mypkg/.pytest_cache
+[0.834s] rootdir: /home/ren/ros2_ws/src/mypkg
+[0.834s] plugins: launch-testing-ros-0.19.13, ament-flake8-0.12.14, launch-testing-1.0.13, ament-lint-0.12.14, ament-copyright-0.12.14, ament-xmllint-0.12.14, ament-pep257-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[0.941s] [1mcollecting ... [0m[1m
+[0.941s] collected 3 items                                                              [0m
+[0.941s] 
+[0.948s] test/test_copyright.py [33ms[0m[32m                                                 [ 33%][0m
+[1.125s] test/test_flake8.py [32m.[0m[33m                                                    [ 66%][0m
+[1.174s] test/test_pep257.py [32m.[0m[33m                                                    [100%][0m
+[1.175s] 
+[1.175s] [33m=============================== warnings summary ===============================[0m
+[1.175s] test/test_flake8.py::test_flake8
+[1.175s] test/test_flake8.py::test_flake8
+[1.175s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[1.176s] 
+[1.176s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[1.176s] ---- generated xml file: /home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml ----
+[1.176s] [33m=================== [32m2 passed[0m, [33m[1m1 skipped[0m, [33m[1m2 warnings[0m[33m in 0.35s[0m[33m ===================[0m
+[1.271s] Invoked command in '/home/ren/ros2_ws/src/mypkg' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

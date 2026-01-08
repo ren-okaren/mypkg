@@ -1,0 +1,95 @@
+[0.445s] Invoking command in '/home/ren/ros2_ws/src/mypkg': CONDA_PROMPT_MODIFIER=(base) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[1.057s] [1m============================= test session starts ==============================[0m
+[1.057s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[1.062s] cachedir: build/mypkg/.pytest_cache
+[1.062s] rootdir: /home/ren/ros2_ws/src/mypkg
+[1.062s] plugins: launch-testing-ros-0.19.13, ament-flake8-0.12.14, launch-testing-1.0.13, ament-lint-0.12.14, ament-copyright-0.12.14, ament-xmllint-0.12.14, ament-pep257-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[1.208s] [1mcollecting ... [0m[1m
+[1.209s] collected 3 items                                                              [0m
+[1.209s] 
+[1.217s] test/test_copyright.py [33ms[0m[32m                                                 [ 33%][0m
+[1.501s] test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+[1.540s] test/test_pep257.py [31mF[0m[31m                                                    [100%][0m
+[1.541s] 
+[1.541s] =================================== FAILURES ===================================
+[1.541s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[1.541s] [1m[31mtest/test_flake8.py[0m:28: in test_flake8
+[1.633s]     [94massert[39;49;00m rc == [94m0[39;49;00m, [33m'[39;49;00m[33mFound [39;49;00m[33m%d[39;49;00m[33m code style errors / warnings:[39;49;00m[33m\n[39;49;00m[33m'[39;49;00m % [96mlen[39;49;00m(
+[1.633s] [1m[31mE   AssertionError: Found 4 code style errors / warnings:[0m
+[1.633s] [1m[31mE     ./setup.py:15:80: E501 line too long (84 > 79 characters)[0m
+[1.634s] [1m[31mE     ./setup.py:38:1: W391 blank line at end of file[0m
+[1.634s] [1m[31mE     ./launch/wareki.launch.py:13:80: E501 line too long (82 > 79 characters)[0m
+[1.634s] [1m[31mE     ./test/test_flake8.py:24:80: E501 line too long (82 > 79 characters)[0m
+[1.634s] [1m[31mE   assert 1 == 0[0m
+[1.634s] ----------------------------- Captured stdout call -----------------------------
+[1.634s] 
+[1.634s] ./setup.py:15:80: E501 line too long (84 > 79 characters)
+[1.634s] 
+[1.634s] ./setup.py:38:1: W391 blank line at end of file
+[1.634s] 
+[1.634s] ./launch/wareki.launch.py:13:80: E501 line too long (82 > 79 characters)
+[1.635s] 
+[1.635s] ./test/test_flake8.py:24:80: E501 line too long (82 > 79 characters)
+[1.635s] 
+[1.635s] 
+[1.635s] 14 files checked
+[1.635s] 4 errors
+[1.635s] 
+[1.635s] 'E'-type errors: 3
+[1.635s] 'W'-type errors: 1
+[1.635s] 
+[1.635s] Checked files:
+[1.635s] 
+[1.635s] * ./setup.py
+[1.635s] * ./launch/wareki.launch.py
+[1.635s] * ./launch/talk_listen.launch.py
+[1.635s] * ./mypkg/wareki_converter.py
+[1.635s] * ./mypkg/listener.py
+[1.635s] * ./mypkg/listener_topic.py
+[1.635s] * ./mypkg/wareki_server.py
+[1.635s] * ./mypkg/__init__.py
+[1.636s] * ./mypkg/talker_topic.py
+[1.636s] * ./mypkg/year_pub.py
+[1.636s] * ./mypkg/talker.py
+[1.636s] * ./test/test_flake8.py
+[1.636s] * ./test/test_pep257.py
+[1.636s] * ./test/test_copyright.py
+[1.636s] ----------------------------- Captured stderr call -----------------------------
+[1.636s] option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[1.636s] [31m[1m_________________________________ test_pep257 __________________________________[0m
+[1.636s] [1m[31mtest/test_pep257.py[0m:23: in test_pep257
+[1.636s]     [94massert[39;49;00m rc == [94m0[39;49;00m, [33m'[39;49;00m[33mFound code style errors / warnings[39;49;00m[33m'[39;49;00m
+[1.636s] [1m[31mE   AssertionError: Found code style errors / warnings[0m
+[1.636s] [1m[31mE   assert 1 == 0[0m
+[1.636s] ----------------------------- Captured stdout call -----------------------------
+[1.636s] checking ./launch/talk_listen.launch.py
+[1.636s] checking ./launch/wareki.launch.py
+[1.637s] checking ./mypkg/__init__.py
+[1.637s] checking ./mypkg/listener.py
+[1.637s] checking ./mypkg/listener_topic.py
+[1.637s] checking ./mypkg/talker.py
+[1.637s] checking ./mypkg/talker_topic.py
+[1.637s] checking ./mypkg/wareki_converter.py
+[1.637s] checking ./mypkg/wareki_server.py
+[1.637s] ./mypkg/wareki_server.py:8 in public function `ad_to_wareki`: D300: Use """triple double quotes""" (found '''-quotes)
+[1.637s] checking ./mypkg/year_pub.py
+[1.637s] checking ./setup.py
+[1.637s] checking ./test/test_copyright.py
+[1.638s] checking ./test/test_flake8.py
+[1.638s] checking ./test/test_pep257.py
+[1.638s] checking test/test_copyright.py
+[1.638s] checking test/test_flake8.py
+[1.638s] checking test/test_pep257.py
+[1.638s] 1 errors
+[1.638s] [33m=============================== warnings summary ===============================[0m
+[1.638s] test/test_flake8.py::test_flake8
+[1.638s] test/test_flake8.py::test_flake8
+[1.638s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[1.638s] 
+[1.638s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[1.638s] ---- generated xml file: /home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml ----
+[1.639s] =========================== short test summary info ============================
+[1.639s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 4 code style ...
+[1.639s] FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...
+[1.639s] [31m=================== [31m[1m2 failed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.58s[0m[31m ===================[0m
+[1.744s] Invoked command in '/home/ren/ros2_ws/src/mypkg' returned '1': CONDA_PROMPT_MODIFIER=(base) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

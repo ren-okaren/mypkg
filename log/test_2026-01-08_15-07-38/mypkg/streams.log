@@ -1,0 +1,86 @@
+[0.409s] Invoking command in '/home/ren/ros2_ws/src/mypkg': CONDA_PROMPT_MODIFIER=(base) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[0.755s] [1m============================= test session starts ==============================[0m
+[0.755s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[0.759s] cachedir: build/mypkg/.pytest_cache
+[0.760s] rootdir: /home/ren/ros2_ws/src/mypkg
+[0.760s] plugins: launch-testing-ros-0.19.13, ament-flake8-0.12.14, launch-testing-1.0.13, ament-lint-0.12.14, ament-copyright-0.12.14, ament-xmllint-0.12.14, ament-pep257-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[0.847s] [1mcollecting ... [0m[1m
+[0.847s] collected 3 items                                                              [0m
+[0.847s] 
+[0.852s] test/test_copyright.py [33ms[0m[32m                                                 [ 33%][0m
+[1.037s] test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+[1.079s] test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+[1.079s] 
+[1.079s] =================================== FAILURES ===================================
+[1.079s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[1.079s] [1m[31mtest/test_flake8.py[0m:30: in test_flake8
+[1.112s]     [94massert[39;49;00m rc == [94m0[39;49;00m, [33m'[39;49;00m[33mFound [39;49;00m[33m%d[39;49;00m[33m code style errors / warnings:[39;49;00m[33m\n[39;49;00m[33m'[39;49;00m % [96mlen[39;49;00m(
+[1.112s] [1m[31mE   AssertionError: Found 10 code style errors / warnings:[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:9:8: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:10:25: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:11:8: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:12:25: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:13:8: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:14:25: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:15:8: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:16:25: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:17:8: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE     ./mypkg/wareki_server.py:18:25: F821 undefined name 'ad'[0m
+[1.113s] [1m[31mE   assert 1 == 0[0m
+[1.113s] ----------------------------- Captured stdout call -----------------------------
+[1.113s] 
+[1.113s] ./mypkg/wareki_server.py:9:8: F821 undefined name 'ad'
+[1.113s] 
+[1.114s] ./mypkg/wareki_server.py:10:25: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] ./mypkg/wareki_server.py:11:8: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] ./mypkg/wareki_server.py:12:25: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] ./mypkg/wareki_server.py:13:8: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] ./mypkg/wareki_server.py:14:25: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] ./mypkg/wareki_server.py:15:8: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] ./mypkg/wareki_server.py:16:25: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] ./mypkg/wareki_server.py:17:8: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] ./mypkg/wareki_server.py:18:25: F821 undefined name 'ad'
+[1.114s] 
+[1.114s] 
+[1.114s] 14 files checked
+[1.114s] 10 errors
+[1.114s] 
+[1.114s] 'F'-type errors: 10
+[1.115s] 
+[1.115s] Checked files:
+[1.115s] 
+[1.115s] * ./setup.py
+[1.115s] * ./launch/wareki.launch.py
+[1.115s] * ./launch/talk_listen.launch.py
+[1.115s] * ./mypkg/wareki_converter.py
+[1.115s] * ./mypkg/listener.py
+[1.115s] * ./mypkg/listener_topic.py
+[1.115s] * ./mypkg/wareki_server.py
+[1.115s] * ./mypkg/__init__.py
+[1.115s] * ./mypkg/talker_topic.py
+[1.115s] * ./mypkg/year_pub.py
+[1.115s] * ./mypkg/talker.py
+[1.115s] * ./test/test_flake8.py
+[1.115s] * ./test/test_pep257.py
+[1.115s] * ./test/test_copyright.py
+[1.115s] ----------------------------- Captured stderr call -----------------------------
+[1.115s] option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[1.115s] ---- generated xml file: /home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml ----
+[1.115s] =========================== short test summary info ============================
+[1.115s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 10 code style...
+[1.116s] [31m============== [31m[1m1 failed[0m, [32m1 passed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.36s[0m[31m ==============[0m
+[1.116s] [33m=============================== warnings summary ===============================[0m
+[1.116s] test/test_flake8.py::test_flake8
+[1.116s] test/test_flake8.py::test_flake8
+[1.116s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[1.116s] 
+[1.116s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[1.198s] Invoked command in '/home/ren/ros2_ws/src/mypkg' returned '1': CONDA_PROMPT_MODIFIER=(base) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

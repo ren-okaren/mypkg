@@ -1,0 +1,118 @@
+[0.000000] (-) TimerEvent: {}
+[0.001437] (mypkg) JobQueued: {'identifier': 'mypkg', 'dependencies': OrderedDict([('mypkg', '/home/ren/ros2_ws/src/mypkg/install/mypkg')])}
+[0.001548] (mypkg) JobStarted: {'identifier': 'mypkg'}
+[0.098955] (-) TimerEvent: {}
+[0.200202] (-) TimerEvent: {}
+[0.301313] (-) TimerEvent: {}
+[0.402340] (-) TimerEvent: {}
+[0.443579] (mypkg) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/ren/ros2_ws/src/mypkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '(base)', 'USER': 'ren', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ren/ros2_ws/install/ren_msgs/lib:/home/ren/ros2_ws/install/mypkg_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'CONDA_BACKUP_QT_XCB_GL_INTEGRATION': '', 'HOME': '/home/ren', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/ren/ros2_ws/src/mypkg', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ren/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ren', 'NAME': 'Okaren', 'WSL_INTEROP': '/run/WSL/418_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ren/.local/bin:/opt/ros/humble/bin:/home/ren/anaconda3/bin:/home/ren/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Users/ren46/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ren46/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'QT_XCB_GL_INTEGRATION': 'none', 'GSETTINGS_SCHEMA_DIR': '/home/ren/anaconda3/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/ren/ros2_ws/install/ren_msgs:/home/ren/ros2_ws/install/mypkg_interfaces:/home/ren/ros2_ws/install/mypkg:/opt/ros/humble', 'CONDA_PYTHON_EXE': '/home/ren/anaconda3/bin/python', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': 'base', 'PWD': '/home/ren/ros2_ws/src/mypkg/build/mypkg', 'CONDA_EXE': '/home/ren/anaconda3/bin/conda', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ren/ros2_ws/install/ren_msgs/local/lib/python3.10/dist-packages:/home/ren/ros2_ws/install/mypkg_interfaces/local/lib/python3.10/dist-packages:/home/ren/ros2_ws/build/mypkg:/home/ren/ros2_ws/install/mypkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'CONDA_PREFIX': '/home/ren/anaconda3', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ren/ros2_ws/install/ren_msgs:/home/ren/ros2_ws/install/mypkg_interfaces', 'WSLENV': '', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/ren/ros2_ws/src/mypkg/build/mypkg/.pytest_cache'}, 'shell': False}
+[0.503018] (-) TimerEvent: {}
+[0.604109] (-) TimerEvent: {}
+[0.705155] (-) TimerEvent: {}
+[0.806207] (-) TimerEvent: {}
+[0.907266] (-) TimerEvent: {}
+[1.008431] (-) TimerEvent: {}
+[1.058117] (mypkg) StdoutLine: {'line': b'\x1b[1m============================= test session starts ==============================\x1b[0m\n'}
+[1.058820] (mypkg) StdoutLine: {'line': b'platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0\n'}
+[1.063518] (mypkg) StdoutLine: {'line': b'cachedir: build/mypkg/.pytest_cache\n'}
+[1.063673] (mypkg) StdoutLine: {'line': b'rootdir: /home/ren/ros2_ws/src/mypkg\n'}
+[1.063776] (mypkg) StdoutLine: {'line': b'plugins: launch-testing-ros-0.19.13, ament-flake8-0.12.14, launch-testing-1.0.13, ament-lint-0.12.14, ament-copyright-0.12.14, ament-xmllint-0.12.14, ament-pep257-0.12.14, colcon-core-0.20.1, cov-3.0.0\n'}
+[1.108928] (-) TimerEvent: {}
+[1.209617] (mypkg) StdoutLine: {'line': b'\x1b[1mcollecting ... \x1b[0m\x1b[1m\n'}
+[1.210186] (-) TimerEvent: {}
+[1.210431] (mypkg) StdoutLine: {'line': b'collected 3 items                                                              \x1b[0m\n'}
+[1.210641] (mypkg) StdoutLine: {'line': b'\n'}
+[1.218566] (mypkg) StdoutLine: {'line': b'test/test_copyright.py \x1b[33ms\x1b[0m\x1b[32m                                                 [ 33%]\x1b[0m\n'}
+[1.310872] (-) TimerEvent: {}
+[1.413053] (-) TimerEvent: {}
+[1.502107] (mypkg) StdoutLine: {'line': b'test/test_flake8.py \x1b[31mF\x1b[0m\x1b[31m                                                    [ 66%]\x1b[0m\n'}
+[1.513216] (-) TimerEvent: {}
+[1.541764] (mypkg) StdoutLine: {'line': b'test/test_pep257.py \x1b[31mF\x1b[0m\x1b[31m                                                    [100%]\x1b[0m\n'}
+[1.542099] (mypkg) StdoutLine: {'line': b'\n'}
+[1.542166] (mypkg) StdoutLine: {'line': b'=================================== FAILURES ===================================\n'}
+[1.542221] (mypkg) StdoutLine: {'line': b'\x1b[31m\x1b[1m_________________________________ test_flake8 __________________________________\x1b[0m\n'}
+[1.542289] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mtest/test_flake8.py\x1b[0m:28: in test_flake8\n'}
+[1.613892] (-) TimerEvent: {}
+[1.633346] (mypkg) StdoutLine: {'line': b"    \x1b[94massert\x1b[39;49;00m rc == \x1b[94m0\x1b[39;49;00m, \x1b[33m'\x1b[39;49;00m\x1b[33mFound \x1b[39;49;00m\x1b[33m%d\x1b[39;49;00m\x1b[33m code style errors / warnings:\x1b[39;49;00m\x1b[33m\\n\x1b[39;49;00m\x1b[33m'\x1b[39;49;00m % \x1b[96mlen\x1b[39;49;00m(\n"}
+[1.634483] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   AssertionError: Found 4 code style errors / warnings:\x1b[0m\n'}
+[1.634757] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./setup.py:15:80: E501 line too long (84 > 79 characters)\x1b[0m\n'}
+[1.634971] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./setup.py:38:1: W391 blank line at end of file\x1b[0m\n'}
+[1.635141] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/wareki.launch.py:13:80: E501 line too long (82 > 79 characters)\x1b[0m\n'}
+[1.635253] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./test/test_flake8.py:24:80: E501 line too long (82 > 79 characters)\x1b[0m\n'}
+[1.635637] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   assert 1 == 0\x1b[0m\n'}
+[1.635712] (mypkg) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[1.635785] (mypkg) StdoutLine: {'line': b'\n'}
+[1.635838] (mypkg) StdoutLine: {'line': b'./setup.py:15:80: E501 line too long (84 > 79 characters)\n'}
+[1.635895] (mypkg) StdoutLine: {'line': b'\n'}
+[1.635946] (mypkg) StdoutLine: {'line': b'./setup.py:38:1: W391 blank line at end of file\n'}
+[1.635995] (mypkg) StdoutLine: {'line': b'\n'}
+[1.636044] (mypkg) StdoutLine: {'line': b'./launch/wareki.launch.py:13:80: E501 line too long (82 > 79 characters)\n'}
+[1.636091] (mypkg) StdoutLine: {'line': b'\n'}
+[1.636137] (mypkg) StdoutLine: {'line': b'./test/test_flake8.py:24:80: E501 line too long (82 > 79 characters)\n'}
+[1.636184] (mypkg) StdoutLine: {'line': b'\n'}
+[1.636228] (mypkg) StdoutLine: {'line': b'\n'}
+[1.636273] (mypkg) StdoutLine: {'line': b'14 files checked\n'}
+[1.636317] (mypkg) StdoutLine: {'line': b'4 errors\n'}
+[1.636403] (mypkg) StdoutLine: {'line': b'\n'}
+[1.636473] (mypkg) StdoutLine: {'line': b"'E'-type errors: 3\n"}
+[1.636528] (mypkg) StdoutLine: {'line': b"'W'-type errors: 1\n"}
+[1.636582] (mypkg) StdoutLine: {'line': b'\n'}
+[1.636633] (mypkg) StdoutLine: {'line': b'Checked files:\n'}
+[1.636681] (mypkg) StdoutLine: {'line': b'\n'}
+[1.636730] (mypkg) StdoutLine: {'line': b'* ./setup.py\n'}
+[1.636780] (mypkg) StdoutLine: {'line': b'* ./launch/wareki.launch.py\n'}
+[1.636827] (mypkg) StdoutLine: {'line': b'* ./launch/talk_listen.launch.py\n'}
+[1.636874] (mypkg) StdoutLine: {'line': b'* ./mypkg/wareki_converter.py\n'}
+[1.636919] (mypkg) StdoutLine: {'line': b'* ./mypkg/listener.py\n'}
+[1.636963] (mypkg) StdoutLine: {'line': b'* ./mypkg/listener_topic.py\n'}
+[1.637009] (mypkg) StdoutLine: {'line': b'* ./mypkg/wareki_server.py\n'}
+[1.637055] (mypkg) StdoutLine: {'line': b'* ./mypkg/__init__.py\n'}
+[1.637100] (mypkg) StdoutLine: {'line': b'* ./mypkg/talker_topic.py\n'}
+[1.637144] (mypkg) StdoutLine: {'line': b'* ./mypkg/year_pub.py\n'}
+[1.637191] (mypkg) StdoutLine: {'line': b'* ./mypkg/talker.py\n'}
+[1.637237] (mypkg) StdoutLine: {'line': b'* ./test/test_flake8.py\n'}
+[1.637282] (mypkg) StdoutLine: {'line': b'* ./test/test_pep257.py\n'}
+[1.637325] (mypkg) StdoutLine: {'line': b'* ./test/test_copyright.py\n'}
+[1.637369] (mypkg) StdoutLine: {'line': b'----------------------------- Captured stderr call -----------------------------\n'}
+[1.637413] (mypkg) StdoutLine: {'line': b'option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[1.637459] (mypkg) StdoutLine: {'line': b'\x1b[31m\x1b[1m_________________________________ test_pep257 __________________________________\x1b[0m\n'}
+[1.637503] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mtest/test_pep257.py\x1b[0m:23: in test_pep257\n'}
+[1.637555] (mypkg) StdoutLine: {'line': b"    \x1b[94massert\x1b[39;49;00m rc == \x1b[94m0\x1b[39;49;00m, \x1b[33m'\x1b[39;49;00m\x1b[33mFound code style errors / warnings\x1b[39;49;00m\x1b[33m'\x1b[39;49;00m\n"}
+[1.637604] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   AssertionError: Found code style errors / warnings\x1b[0m\n'}
+[1.637651] (mypkg) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   assert 1 == 0\x1b[0m\n'}
+[1.637695] (mypkg) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[1.637749] (mypkg) StdoutLine: {'line': b'checking ./launch/talk_listen.launch.py\n'}
+[1.637931] (mypkg) StdoutLine: {'line': b'checking ./launch/wareki.launch.py\n'}
+[1.638192] (mypkg) StdoutLine: {'line': b'checking ./mypkg/__init__.py\n'}
+[1.638288] (mypkg) StdoutLine: {'line': b'checking ./mypkg/listener.py\n'}
+[1.638415] (mypkg) StdoutLine: {'line': b'checking ./mypkg/listener_topic.py\n'}
+[1.638511] (mypkg) StdoutLine: {'line': b'checking ./mypkg/talker.py\n'}
+[1.638589] (mypkg) StdoutLine: {'line': b'checking ./mypkg/talker_topic.py\n'}
+[1.638661] (mypkg) StdoutLine: {'line': b'checking ./mypkg/wareki_converter.py\n'}
+[1.638731] (mypkg) StdoutLine: {'line': b'checking ./mypkg/wareki_server.py\n'}
+[1.638813] (mypkg) StdoutLine: {'line': b'./mypkg/wareki_server.py:8 in public function `ad_to_wareki`: D300: Use """triple double quotes""" (found \'\'\'-quotes)\n'}
+[1.638896] (mypkg) StdoutLine: {'line': b'checking ./mypkg/year_pub.py\n'}
+[1.638964] (mypkg) StdoutLine: {'line': b'checking ./setup.py\n'}
+[1.639031] (mypkg) StdoutLine: {'line': b'checking ./test/test_copyright.py\n'}
+[1.639119] (mypkg) StdoutLine: {'line': b'checking ./test/test_flake8.py\n'}
+[1.639186] (mypkg) StdoutLine: {'line': b'checking ./test/test_pep257.py\n'}
+[1.639251] (mypkg) StdoutLine: {'line': b'checking test/test_copyright.py\n'}
+[1.639316] (mypkg) StdoutLine: {'line': b'checking test/test_flake8.py\n'}
+[1.639380] (mypkg) StdoutLine: {'line': b'checking test/test_pep257.py\n'}
+[1.639443] (mypkg) StdoutLine: {'line': b'1 errors\n'}
+[1.639528] (mypkg) StderrLine: {'line': b'\x1b[33m=============================== warnings summary ===============================\x1b[0m\n'}
+[1.639649] (mypkg) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[1.639722] (mypkg) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[1.639791] (mypkg) StderrLine: {'line': b'  Warning: SelectableGroups dict interface is deprecated. Use select.\n'}
+[1.639861] (mypkg) StderrLine: {'line': b'\n'}
+[1.639927] (mypkg) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/warnings.html\n'}
+[1.640004] (mypkg) StdoutLine: {'line': b'---- generated xml file: /home/ren/ros2_ws/src/mypkg/build/mypkg/pytest.xml ----\n'}
+[1.640074] (mypkg) StdoutLine: {'line': b'=========================== short test summary info ============================\n'}
+[1.640142] (mypkg) StdoutLine: {'line': b'FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 4 code style ...\n'}
+[1.640208] (mypkg) StdoutLine: {'line': b'FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...\n'}
+[1.640285] (mypkg) StdoutLine: {'line': b'\x1b[31m=================== \x1b[31m\x1b[1m2 failed\x1b[0m, \x1b[33m1 skipped\x1b[0m, \x1b[33m2 warnings\x1b[0m\x1b[31m in 0.58s\x1b[0m\x1b[31m ===================\x1b[0m\n'}
+[1.714465] (-) TimerEvent: {}
+[1.745308] (mypkg) CommandEnded: {'returncode': 1}
+[1.745765] (mypkg) TestFailure: {'identifier': 'mypkg'}
+[1.745870] (mypkg) JobEnded: {'identifier': 'mypkg', 'rc': 0}
+[1.747615] (-) EventReactorShutdown: {}

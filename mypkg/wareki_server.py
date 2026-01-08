@@ -4,19 +4,19 @@ import rclpy
 from rclpy.node import Node
 
 
-def ad_to_wareki(ad: int) -> str:
-    '''Convert AD year to Japanese era string (simple version).'''
-    if ad >= 2019:
-        return f'令和{ad - 2018}年'
-    if ad >= 1989:
-        return f'平成{ad - 1988}年'
-    if ad >= 1926:
-        return f'昭和{ad - 1925}年'
-    if ad >= 1912:
-        return f'大正{ad - 1911}年'
-    if ad >= 1868:
-        return f'明治{ad - 1867}年'
-    return '対象外'
+def ad_to_wareki(year: int) -> str:
+    """Convert AD year to Japanese era."""
+    if year >= 2019:
+        return f"令和{year - 2018}年"
+    if year >= 1989:
+        return f"平成{year - 1988}年"
+    if year >= 1926:
+        return f"昭和{year - 1925}年"
+    if year >= 1912:
+        return f"大正{year - 1911}年"
+    if year >= 1868:
+        return f"明治{year - 1867}年"
+    return "対象外"
 
 
 class WarekiServer(Node):

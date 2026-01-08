@@ -21,7 +21,9 @@ import pytest
 @pytest.mark.flake8
 @pytest.mark.linter
 def test_flake8():
-    pkg_root = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+    pkg_root = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), os.pardir)
+    )
     cfg_path = os.path.join(pkg_root, 'setup.cfg')
 
     rc, errors = main_with_errors(argv=['--config', cfg_path])
