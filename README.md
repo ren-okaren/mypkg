@@ -22,6 +22,16 @@
 
 ---
 
+## 実行方法
+
+### launch で実行
+西暦をパラメータで与えて起動します（例：2004）。
+
+```bash
+ros2 launch mypkg wareki.launch.py year:=2004
+
+---
+
 ## インタフェース
 
 ### Service: `/ad_to_wareki`
@@ -34,6 +44,6 @@
 int32 ad_year
 ---
 string wareki
-
+```
 `ad_year`:西暦
 `wareki`:変換後の和暦文字
