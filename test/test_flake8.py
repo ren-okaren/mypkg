@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
+
 from ament_flake8.main import main_with_errors
 import pytest
 
@@ -19,7 +21,10 @@ import pytest
 @pytest.mark.flake8
 @pytest.mark.linter
 def test_flake8():
-    rc, errors = main_with_errors(argv=[])
+    pkg_root = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+    cfg_path = os.path.join(pkg_root, 'setup.cfg')
+
+    rc, errors = main_with_errors(argv=['--config', cfg_path])
     assert rc == 0, "Found %d code style errors / warnings:\n" % len(
         errors
     ) + "\n".join(errors)
