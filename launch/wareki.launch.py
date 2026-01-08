@@ -1,6 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Ren
-# SPDX-License-Identifier: MIT
-
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration

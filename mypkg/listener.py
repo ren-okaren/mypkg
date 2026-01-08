@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Ren
-# SPDX-License-Identifier: MIT
 import rclpy
 from rclpy.node import Node
 from ren_msgs.srv import Query
