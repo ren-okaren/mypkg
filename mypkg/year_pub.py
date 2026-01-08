@@ -9,14 +9,14 @@ from std_msgs.msg import Int32
 class YearPub(Node):
 
     def __init__(self):
-        super().__init__("year_pub")
-        self.declare_parameter("year", 2004)
-        self.pub = self.create_publisher(Int32, "year", 10)
+        super().__init__('year_pub')
+        self.declare_parameter('year', 2004)
+        self.pub = self.create_publisher(Int32, 'year', 10)
         self.timer = self.create_timer(0.2, self.tick)
         self.count = 0
 
     def tick(self):
-        year = int(self.get_parameter("year").value)
+        year = int(self.get_parameter('year').value)
         msg = Int32()
         msg.data = year
         self.pub.publish(msg)
@@ -31,5 +31,5 @@ def main():
     rclpy.spin(node)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

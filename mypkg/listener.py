@@ -7,14 +7,14 @@ from ren_msgs.srv import Query
 
 def main():
     rclpy.init()
-    node = Node("listener")
+    node = Node('listener')
 
-    client = node.create_client(Query, "query")
+    client = node.create_client(Query, 'query')
     while not client.wait_for_service(timeout_sec=1.0):
-        node.get_logger().info("待機中")
+        node.get_logger().info('待機中')
 
     req = Query.Request()
-    req.name = "ren"
+    req.name = 'ren'
     future = client.call_async(req)
 
     while rclpy.ok():
@@ -23,14 +23,14 @@ def main():
             try:
                 response = future.result()
             except Exception:
-                node.get_logger().info("呼び出し失敗")
+                node.get_logger().info('呼び出し失敗')
             else:
-                node.get_logger().info("Listen: age: {}".format(response.age))
+                node.get_logger().info('Listen: age: {}'.format(response.age))
             break
 
     node.destroy_node()
     rclpy.shutdown()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
