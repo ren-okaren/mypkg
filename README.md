@@ -31,11 +31,14 @@
 ros2 launch mypkg wareki.launch.py year:=2004
 ```
 
-##動作確認例
+## 動作確認例
+
 起動すると、`year_pub` が指定した西暦をサービス `/ad_to_wareki` にリクエストし、
 wareki_server が和暦に変換してレスポンスし、結果がログに表示されます。
 例:
+
 `[wareki_server] [INFO] ... service /ad_to_wareki ready`
+
 `[wareki_server] [INFO] ... req: 2004 -> 平成16年`
 
 ---
