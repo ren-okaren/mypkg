@@ -27,9 +27,9 @@
 ### launch で実行
 西暦をパラメータで与えて起動します（例：2004）。
 
-```bash
+```
 ros2 launch mypkg wareki.launch.py year:=2004
-
+```
 ---
 
 ## インタフェース
